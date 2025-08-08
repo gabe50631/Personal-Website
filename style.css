@@ -14,7 +14,7 @@
     background-position: center;
     min-height: 100vh;
     position: relative;
-    padding-bottom: 490px;
+    padding-bottom: 40px;
 }
 
 .navbar{
@@ -26,6 +26,7 @@
     background-color: #5d90ffc8;
     position: relative;
     flex-wrap: wrap; 
+    z-index: 1000;
 }
 
 .icon{
@@ -80,8 +81,8 @@
     display: none;
 }
 
-/* ------------------MOBILE STYLES---------------------------------*/
-@media (max-width: 768px){
+/* -----------------------MOBILE STYLES---------------------------------*/
+@media (max-width: 900px){
     .navbar{
         flex-direction: row;
         align-items: flex-start;
@@ -129,6 +130,7 @@
     }  
 }
 
+/*-----------------------HOME PAGE STYLING------------------------------------*/
 .content{
     width: 1200px;
     float: left;
@@ -175,7 +177,6 @@
     border-radius: 10px;
     cursor: pointer;
     transition: .4s ease;
-
 }
 .content .resume a{
     text-decoration: none;
@@ -296,28 +297,15 @@
 
 
 
-
-.resume_page{
-    width: 100%;
-    background: linear-gradient(0deg, 
-    rgba(18, 70, 237, 0.5)0%, 
-    rgba(90, 240, 255, 0.5)38.2%,
-    rgba(18, 70, 237, 0.5)100%
-    );
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
-}
-
-.content1{
-    text-align: center;
-}
-
+/*------------------------------RESUME PAGE STYLING--------------------------*/
 .content1 .img1{
-    width: 800px;
+    width: 85%;
     height: auto;
     padding-top: 100px;
     padding-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -420,7 +408,7 @@
 
 /* Flexbox for the entire project container */
 .content3 .experiences {
-    display: flex; /* Makes project items display horizontally */
+    display: flex; /* Make items display horizontally */
     padding-bottom: 100px;
     justify-content: flex-start;
     align-items: center;
@@ -530,7 +518,7 @@
     border-radius: 5px;
 }
 
-
+/* ----------------------Photography Styling-------------------------------*/
 .content4{
     clear: both;
 }
