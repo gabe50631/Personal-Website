@@ -6,9 +6,9 @@
 .main{
     width: 100%;
     background: linear-gradient(0deg, 
-        rgba(18, 70, 237, 0.5)0%, 
-        rgba(90, 240, 255, 0.5)38.2%,
-        rgba(18, 70, 237, 0.5)100%
+        rgba(19, 70, 237, 0.5)0%, 
+        rgba(61, 145, 151, 0.5)38.2%,
+        rgba(0, 55, 255, 0.779)100%
         );
         background-size: cover;
     background-position: center;
@@ -18,45 +18,49 @@
 }
 
 .navbar{
-    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
     height: 75px;
-    margin: auto;
-    float: left;
+    background-color: #5d90ffc8;
+    position: relative;
+    flex-wrap: wrap; 
 }
 
 .icon{
-    width: 300px;
-    float: left;
-    height:70px;
+    text-align: left;
 }
 
-.logo{
-    color: #000000;
-    font-size: 35px;
+.icon .logo{
+    margin: 0;
+    line-height: 75px;
+    font-size: 30px;
     font-family: Arial;
-    padding-left: 15px;
-    float: left;
-    padding-top: 10px;
+    color: #000;
 }
+
+.menu-icon{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
 
 .menu{
-    width: 400px;
-    float: right;
-    height: 70px;
-}
-
-.menu_list{
-    float: left;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.menu_list li{
+.menu_list{
+    display: flex;
+    gap: 40px;
     list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
-    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-size: 14;
 }
 
 .menu_list li a{
@@ -67,8 +71,62 @@
     transition: 0.4s ease-in-out;
 }
 
-.menu_list li a:hover{
-    color:rgba(255, 255, 255, 1)
+.menu_list li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* responsive hamburger toggle */
+#menu-toggle{
+    display: none;
+}
+
+/* ------------------MOBILE STYLES---------------------------------*/
+@media (max-width: 768px){
+    .navbar{
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px 20px; 
+        height: auto;
+    }
+    .menu-icon {
+        display: flex;          /* changed from block to flex for vertical centering */
+        font-size: 30px;
+        cursor: pointer;
+        padding: 0 10px;        /* no vertical padding */
+        height: 75px;           /* same height as navbar */
+        align-items: center;    /* vertical center hamburger */
+        margin-left: auto;
+    }
+
+    .menu {
+        width: 100%;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    .menu_list {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: flex-end;
+    }
+    .menu_list li {
+        width: 100%;
+        text-align: right;
+        padding: 10px 0;
+    }
+    #menu-toggle:checked + .menu-icon + .menu{
+        display: flex;
+        max-height: 500px;
+    }
+    .menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+        max-height: 500px; /* Enough height to show all menu items */
+    }  
 }
 
 .content{
@@ -518,6 +576,7 @@
     font-size: 24px;
     opacity: 0;
     transition: opacity 0.3s ease;
+    text-align: center;
 }
 
 .content4 .photo-start img{
