@@ -132,7 +132,6 @@
 
 /*-----------------------HOME PAGE STYLING------------------------------------*/
 .content{
-    width: 1200px;
     float: left;
     height: auto;
     margin: auto;
@@ -239,7 +238,8 @@
 
 .content .img{
     position: absolute;
-    width: 400px;
+    width: 30%;
+    max-width: 400px;
     height: auto;
     top: 230px;
     right: 300px;
