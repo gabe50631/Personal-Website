@@ -132,6 +132,7 @@
 
 /*-----------------------HOME PAGE STYLING------------------------------------*/
 .content{
+    clear: both;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -139,12 +140,13 @@
     align-items: center;
     gap: 50px;
     padding: 20px;
+    min-height: 100vh;
 }
 
 .content .content-text {
-    position: absolute; /* One anchor for both h1 and hr */
-    top: 230px;
-    left: 35%;
+    position: relative; /* One anchor for both h1 and hr */
+    top: auto;
+    left: auto;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -245,68 +247,52 @@
 }
 
 .content .img{
-    position: static;
+    position: relative;
     width: 30%;
     max-width: 400px;
     height: auto;
-    top: 230px;
     right: 15%;
     border-radius: 15px;
-    margin-left: 50vw;
-    margin-top: 120px;
+    margin-left: 70vw;
+    margin-top: -900px;
+}
+
+.arrow{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    cursor: pointer;
+    width: 15%;
 }
 
 
 .more_info{
-    font-size: 18px;
-    width: 40vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* left: photos, right: text */
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
     font-family: Arial, sans-serif;
-    text-align: center;
-
-
-
-    margin-top: 100vh;
-
- 
+    
 }
-
-.home1{
-    position: absolute;
-    width: 300px;
+.photo-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.photo-grid img{
+    width: 100%;
     height: auto;
-    top: 1100px;
-    right: 1250px;
-    border-radius: 5px;
-    padding-bottom: 100px;
+    border-radius: 10px;
+    object-fit: cover;
 }
-
-.home2{
-    position: absolute;
-    width: 270px;
-    height: auto;
-    top: 1100px;
-    right: 600px;
-    border-radius: 5px;
+.more-text{
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
 }
-
-.home3{
-    position: absolute;
-    width: 150px;
-    height: auto;
-    top: 1100px;
-    right: 1000px;
-    border-radius: 5px;
-}
-.home4{
-    position: absolute;
-    width: 300px;
-    height: auto;
-    top: 1100px;
-    right: 200px;
-    border-radius: 5px;
-}
-
-
 
 
 
