@@ -12,6 +12,9 @@
                     <h2 class="logo">Gabe Singaraja</h2>
                 </div>
 
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon" aria-label="Toggle Menu">&#9776;</label>
+
                 <div class="menu">
                     <ul class="menu_list">
                         <li><a href="index.html">HOME</a></li>
@@ -23,6 +26,67 @@
                 </div>
             </div>
             <div class="content2">
+                <!---------------------8x8x8 LED Cube---------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>8x8x8 LED Cube</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>Soldered 512 LEDs into cube shape and created 
+                                controller using ESP32, and 9 74HC595 shift 
+                                registers to control 72 transistors, allowing 
+                                an external 5V DC power supply to power each LED 
+                                on or off</li>
+                            <li>Soldered components to prototype PCBs and connected 
+                                to the cube with ribbon cable</li>
+                            <li>Wrote low-level firmware that uses multiplexing to 
+                                achieve efficient control over each individual LED 
+                                based on its coordinate position.</li>
+                            <li>Programmed several cube animations using tools like
+                                 queues to control sequential falling of "rain drops"</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <video autoplay loop muted playsinline preload="auto" class="project1_img">
+                            <source src="project_images/8x8x8-6.mp4" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <video autoplay loop muted playsinline preload="auto" class="project1_img">
+                            <source src="project_images/8x8x8-5.mp4" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <img src="project_images/8x8x8-1.JPG" alt="led cube" class="project1_img rotate-90">
+                        <img src="project_images/8x8x8-2.JPG" alt="led cube" class="project1_img rotate-90">
+                        <img src="project_images/8x8x8-3.JPG" alt="led cube" class="project1_img rotate-90">
+                        <img src="project_images/8x8x8-4.JPG" alt="led cube" class="project1_img">   
+                    </div>
+                </div>
+                <!-------------------------Robot Arm-------------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>Robot Arm</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>Designed 3 DOF robotic arm and controller case 
+                                using Solidworks, and assembled it using MG90 servos, 
+                                MG996R servos, and potentiometers controlled by 
+                                an Arduino Uno</li>
+                            <li>Completed several design iterations to create a functional robot arm</li>
+                            <li>Soldered custom PCB to connect circuitry</li>
+                            <li>Implemented a queue to provide record/playback functionality</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <img src="project_images/robot_arm1.JPG" alt="robotic arm" class="project1_img">
+                        <img src="project_images/robot_arm2.JPG" alt="robotic arm" class="project1_img">
+                        <img src="project_images/robot_arm3.JPG" alt="robotic arm" class="project1_img rotate-90">
+                        <video autoplay loop muted playsinline preload="auto" class="robot_arm_vid">
+                            <source src="project_images/robot_arm4.mp4" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                    </div>
+                </div>
+                <!-------------------------Medicarm-------------------------->
                 <div class="project">
                     <div class="project-text">
                         <h1>MedicArm</h1>
