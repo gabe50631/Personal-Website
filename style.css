@@ -419,7 +419,7 @@ ul.project_text li{
     margin-bottom: 50px;
 }
 
-/* Right side media */
+
 .project-media {
     flex: 1 1 400px; /* Grow, shrink, min-width */
     display: grid;
@@ -428,6 +428,16 @@ ul.project_text li{
     column-gap: 60px;
     align-items: start;
     padding-left: 20px;
+    position: relative;
+}
+
+.tim_img{
+    width: 20vw;
+    margin-left: 90px;
+}
+
+.drone_img{
+    width: 35vw;
 }
 
 /* Images and video formatting */
@@ -437,6 +447,28 @@ ul.project_text li{
     object-fit: cover;
     border-radius: 6px;
     max-width: 90%;
+}
+
+.project1_vid{
+    padding-left: 20px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    min-width: 2%;
+    max-width: 30vw;
+}
+
+#muteBtn{
+    position: absolute;
+    border: none;
+    color: #000000;
+    margin-left: -50px;
+}
+#muteBtn2 {
+    position: absolute;
+    border: none;
+    margin-left: -50px;
+    color:#000;
 }
 
 .robot_arm_vid {

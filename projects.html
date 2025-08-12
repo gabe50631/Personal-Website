@@ -86,54 +86,12 @@
                         </video>
                     </div>
                 </div>
-                <!-------------------------Medicarm-------------------------->
-                <div class="project">
-                    <div class="project-text">
-                        <h1>MedicArm</h1>
-                        <hr>
-                        <ul class="project_text">
-                            <li>Designed and 3-D printed modular robotic 
-                                arm with MG966R and MG90S servo motors, 
-                                utilizing SolidWorks for CAD design</li>
-                            <li>Implemented Google Speech Recognition API 
-                                to receive input and used IBM Watson TTS 
-                                service for intelligent replies</li>
-                            <li>Facilitated MongoDB database to add and edit
-                                customer user-defined commands to control 
-                                arm movement</li>
-                            <li>Utilized serial communication between Arduino 
-                                and Raspberry Pi 5 to integrate AI model with 
-                                mechanical control</li>
-                        </ul>
-                    </div>
-                    <div class="project-img">
-                        <img src="projects_medicarm.JPG" alt="robotic arm" class="projects_img">
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project-text">
-                        <h1>RI3D (Robot in 3 Days) Chassis</h1>
-                        <hr>
-                        <ul>
-                            <li>Aided with assembly of robot made to complete FIRST 
-                                Robotics competition game for 2025</li>
-                            <li>Assembled drive train and arm mechanism for raising 
-                                and dropping game piece </li>
-                            <li>Collaborated with other students and used drill press, 
-                                chain tool, and horizontal band saw, to complete a remote 
-                                controlled prototype</li>
-                        </ul>
-                    </div>
-                    <div class="project-img">
-                        <img src="projects_ri3d.JPG" alt="robot chassis" class="projects_img">
-                    </div>
-                </div>
                 <!----------------------------Connect 4 Bot------------------------------>
                 <div class="project">
                     <div class="project-text">
                         <h1>Connect 4 Playing Robot</h1>
                         <hr>
-                        <ul>
+                        <ul class="project_text">
                             <li>Designed and programmed a robot using LEGO Mindstorms 
                                 components and LEGO EV3 brick to hold Connect 4 tokens</li>
                             <li>Read the state of a Connect 4 board, and move around to play 
@@ -150,51 +108,105 @@
                                  in a technical report</li>
                         </ul>
                     </div>
-                    <div class="project-images">
-                        <img src="projects_connect41.JPG" alt="connect 4 robot" class="projects_img">
-                        <img src="projects_connect42.JPG" alt="connect 4 robot" class="projects_img">
+                    <div class="project-media">
+                        <img src="project_images/connect41.jpg" alt="led cube" class="project1_img">
+                        <img src="project_images/connect42.jpg" alt="led cube" class="project1_img">
                     </div>
                 </div>
+                <!---------------------TIM---------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>Tourist Information Provider</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>Raspberry Pi 4 + camera providing real-time foreign 
+                                text translation and image recognition of popular landmarks</li>
+                            <li>Flask front end allows users to choose between text 
+                                translation and image recognition</li>
+                            <li>Live camera feed captures images of popular landmarks, 
+                                which is identified by OpenCV, and then Google Gemini provides an 
+                                informative read-out using Google Cloud Text-to-Speech API</li>
+                            <li>Text translate feature uses OpenCV to read text, Google Cloud 
+                                Translate and Text-to-Speech to read it out loud </li>
+                        </ul>
+                    </div>
+                    <div class="project-media1">
+                        <video id="TIMVideo" autoplay loop muted playsinline class="project1_vid">
+                            <source src="project_images/TIM2.mp4" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <button id="muteBtn">Unmute</button>
+                        <img src="project_images/TIM1.JPEG" alt="Tourist Information Provider" class="tim_img">
+                    </div>
+                </div>
+                <!--------------------------FPV Drone--------------------------------------->
                 <div class="project">
                     <div class="project-text">
                         <h1>FPV Drone</h1>
                         <hr>
-                        <ul>
+                        <ul class="project_text">
                             <li>Soldered necessary components to flight controller and assembled body 
                                 of drone</li>
                             <li>Installed and configured firmware on flight controller using Betaflight, 
                                 tuned motors with PID control and adjusted settings to optimize flight
                                  performance</li>
                             <li>Successfully performed RC transmitter and receiver binding, and adjusted 
-                                various controller settings </li>
-                            <li>Researched principles of video transmission in order to adjust channels
-                                 and power output from video transmitter</li>
+                                various controller settings</li>
                         </ul>
                     </div>
-                    <div class="project-img">
-                        <img src="projects_drone.JPG" alt="FPV drone" class="projects_img">
-                    </div>
-                </div>                    
-                <div class="project">
-                    <div class="project-text">
-                        <h1>4x4x4 LED Cube</h1>
-                        <hr>
-                        <ul>
-                            <li>Soldered 64 LEDs together to form 4 layers of 16, with each LED being
-                                 individually controlled by supplying power to an entire layer, but 
-                                 setting individual columns to act as ground</li>
-                            <li>Navigated precise soldering between LEDs, and connecting the cube to a 
-                                prototype PCB</li>
-                            <li>Programmed a microcontroller with Arduino IDE to create light patterns</li>
-                        </ul>
-                    </div>
-                    <div class="project-img">
-                        <img src="projects_led_cube.JPG" alt="LED cube" class="projects_img">
+                    <div class="project-media">
+                        <img src="project_images/drone.jpg" alt="led cube" class="drone_img"> 
                     </div>
                 </div>
-                        
+                <!-------------------------Medicarm-------------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>MedicArm</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>3D printed modular robotic arm with MG966R and MG90S servo motors.</li>
+                            <li>Implemented Google Speech Recognition API 
+                                to receive input and used IBM Watson TTS 
+                                service for intelligent replies</li>
+                            <li>Facilitated MongoDB database to add and edit
+                                customer user-defined commands to control 
+                                arm movement</li>
+                            <li>Utilized serial communication between Arduino 
+                                and Raspberry Pi 5 to integrate AI model with 
+                                mechanical control</li>
+                        </ul>
+                    </div>
+                    <div class="project-media1">
+                        <video id="medicarm_video" autoplay loop muted playsinline class="project1_vid">
+                            <source src="project_images/medicarm1.mp4" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <button id="muteBtn2">Unmute</button>
+                    </div>
+                </div>
+                <!--------------------------Robot in 3 Days---------------------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>RI3D (Robot in 3 Days) Chassis</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>Aided with assembly of robot made to complete FIRST 
+                                Robotics competition game for 2025</li>
+                            <li>Assembled drive train and arm mechanism for raising 
+                                and dropping game piece </li>
+                            <li>Collaborated with other students and used drill press, 
+                                chain tool, and horizontal band saw, to complete a remote 
+                                controlled prototype</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <img src="project_images/ri3d-1.jpg" alt="robotic arm" class="project1_img">
+                    </div>
+                </div>
             </div>
         </div>
+        <script src="mute_button.js"></script>
+        <script src="mute_button2.js"></script>
     </body>
 
 </html>
