@@ -170,13 +170,14 @@
 }
 
 .content .content-text .par{
-    display: flex;
     padding-top: 5px;
     font-family: Arial, sans-serif;
     letter-spacing: 1.1px;
     line-height: 22px;
     text-align: center;
     width: 30vw;
+    margin: 0 auto;
+    font-size: 16px;
 }
 
 .content .resume{
@@ -199,6 +200,16 @@
 }
 .content .resume:hover{
     background-color:#f4faff;
+}
+
+.content .resume a, .content .linkedin a, .content .email a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(4, 49, 172);
 }
 
 .content .linkedin{
@@ -271,15 +282,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr; /* left: photos, right: text */
     align-items: center;
-    gap: 40px;
+    gap: 90px 90px;
     padding: 60px;
-    font-family: Arial, sans-serif;
-    
 }
 .photo-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 35px;
 }
 .photo-grid img{
     width: 100%;
@@ -289,15 +298,17 @@
 }
 .more-text{
     text-align: left;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.6;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
 }
 
 
 
 /*------------------------------RESUME PAGE STYLING--------------------------*/
 .content1 .img1{
-    width: 85%;
+    width: 55%;
     height: auto;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -306,6 +317,13 @@
     margin-right: auto;
 }
 
+@media screen and (max-width: 768px){
+    .content1 .img1{
+        width: 85%;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+}
 
 
 /*--------------------------------Project Page Styling----------------------------*/
@@ -407,7 +425,12 @@ ul.project_text li{
     object-fit: cover;
     border-radius: 6px;
     max-width: 40vw;
+    max-width: 100%;
+    width: 100%;   /* ensures no overflow */
+    height: auto;
+    display: block; /* prevents inline gaps */
 }
+
 
 .rotate-90{
     transform: rotate(270deg);
@@ -421,6 +444,11 @@ ul.project_text li{
     border-radius: 6px;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+
 /* Responsive tweak for very small screens */
 @media (max-width: 768px) {
     .project {
@@ -431,26 +459,6 @@ ul.project_text li{
         flex: 1 1 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -531,80 +539,10 @@ ul.experience-list li{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ----------------------------------Photography Styling-----------------------------------------------*/
 .content4{
     clear: both;
+    padding-bottom: 50px;
 }
 
 .content4 h1{
@@ -631,7 +569,6 @@ ul.experience-list li{
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-bottom: -800px;
 }
 
 .content4 .photo-wrapper{
