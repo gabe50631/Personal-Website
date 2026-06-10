@@ -292,7 +292,7 @@
 }
 .photo-grid img{
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -378,6 +378,7 @@ ul.project_text li{
     align-items: start;
     padding-left: 20px;
     position: relative;
+    overflow: hidden;
 }
 
 .tim_img{
@@ -391,20 +392,40 @@ ul.project_text li{
 
 /* Images and video formatting */
 .project1_img {
-    padding-left: 20px;
+    width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 6px;
-    max-width: 90%;
+    display: block;
 }
 
-.project1_vid{
-    padding-left: 20px;
+.project1_img.wide {
+    grid-column: span 3;
+}
+
+.project1_img.big {
+    grid-column: span 2;
+}
+
+.project1_vid {
+    width: 100%;
+    max-width: 100%;
     height: auto;
-    object-fit: cover;
     border-radius: 6px;
-    min-width: 2%;
-    max-width: 30vw;
+    display: block;
+    grid-column: span 1;
+}
+
+.project1_vid.large {
+    grid-column: span 2;
+}
+
+.project1_vid.larger {
+    grid-column: span 3;
+}
+
+.project-media > * {
+    min-width: 0;
 }
 
 #muteBtn{
@@ -432,10 +453,7 @@ ul.project_text li{
 }
 
 
-.rotate-90{
-    transform: rotate(270deg);
-    transform-origin: center center;
-}
+
 
 /* Video styling */
 .project1_img video {

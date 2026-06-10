@@ -26,6 +26,133 @@
                 </div>
             </div>
             <div class="content2">
+                <!---------------------RC Submarine---------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>Remote Control Submarine</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>Designed and built dual ballast system using DC motors with encoders to 
+                                drive worm gears and racks, changing plunger position in syringe connected 
+                                to external water, allowing the submarine's density to change on command
+                            </li>
+                            <li>Designed and built servo gear mechanism to swivel rear thruster, keeping the servo
+                                dry within the submarine by using a magnetic coupling to transmit the force.
+                            </li>
+                            <li>3D printed frame and assembled everything</li>
+                            <li>Soldered custom breakout board for Linux development board</li>
+                            <li>Due to poor PWM output from Linux development board, used Arduino Uno to control 
+                                PWM outputs, and established UART connection between Aduino and Linux development 
+                                board to continually send data
+                            </li>
+                            <li>Harnessed thrusters, ballast motors, ballast encoders, ballast limit switches, 
+                                H-bridge circuit, buck converter, Arduino, and Linux development board
+                            </li>
+                            <li>Harnessed submarine with 12V cable for power, and ethernet cable for data streaming 
+                                between laptop and Linux development board
+                            </li>
+                            <li>Developed custom control software in Python for Linux board to receive controller 
+                                input from laptop, and update position of motors on the submarine, allowing for easy control
+                                of yaw, pitch, roll, and thrust
+                            </li>
+                            <li>Used C++ script on Arduino to arm all ESCs and continually update PWM output based on 
+                                serial data received from Linux board
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <video autoplay loop muted playsinline preload="auto" class="project1_vid larger">
+                            <source src="project_images/sub_1.mp4" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <img src="project_images/sub_2.png" alt="submarine prototype" class="project1_img wide">
+                    </div>
+                </div>
+
+
+                <!---------------------Brushless Motor---------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>3D Printed Brushless DC Motor and Driver</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>Designed 3D printed brushless motor in Solidworks, wound 
+                                copper coils, and created custom control circuitry 
+                                with perfboard
+                            </li>
+                            <li>Prototyped simpler versions on breadboard and worked up to 
+                                3 phase open-loop control at thousands of RPM
+                            </li>
+                            <li>Used IRLZ44N MOSFETs controlled by Arduino Uno with 
+                                flyback diodes for heat dissipation during rapid switching.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <img src="project_images/bldc_6.png" alt="initial prototype" class="project1_img wide">    
+                        <video autoplay loop muted playsinline preload="auto" class="project1_vid">
+                            <source src="project_images/bldc_4.mov" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <video autoplay loop muted playsinline preload="auto" class="project1_vid">
+                            <source src="project_images/bldc_1.mov" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <img src="project_images/bldc_5.jpg" alt="initial prototype" class="project1_img">   
+                    </div>
+                </div>
+
+
+                <!---------------------Cycloidal Drive---------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>3D Printed Cycloidal Drive</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>Designed multi-stage cycloidal actuator in 
+                                Solidworks to be 3D printed and easily assembled</li>
+                            <li>Achieves 10:1 reduction ratio, maintaining backdriveability 
+                                and minimizing friction while being powered by a Nema 17 
+                                stepper motor</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <img src="project_images/cycloidal_3.png" alt="cycloidal drive render, exploded view" class="project1_img wide">
+                        <video autoplay loop muted playsinline preload="auto" class="project1_img">
+                            <source src="project_images/cycloidal_6.mov" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <img src="project_images/cycloidal_2.jpg" alt="led cube" class="project1_img">
+                        <img src="project_images/cycloidal_4.jpg" alt="led cube" class="project1_img">
+                        <video autoplay loop muted playsinline preload="auto" class="project1_vid large">
+                            <source src="project_images/cycloidal_5.mov" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <img src="project_images/cycloidal_1.jpg" alt="led cube" class="project1_img">
+                    </div>
+                </div>
+
+
+                <!---------------------LDO---------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>Low-Dropout Linear Regulator</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>Designed low-dropout linear regulator circuit to step 
+                                5V down to 3V3 for use with various quadcopter electronics</li>
+                            <li>Simulating performance of negative feedback loop in LTspice 
+                                and used Altium for schematic and PCB design</li>
+                            <li>Assembled and tested PCB to confirm performance at various loads</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <img src="project_images/ldo.jpg" alt="low-dropout regulator PCB" class="project1_img wide">   
+                    </div>
+                </div>
+
+
+
                 <!---------------------8x8x8 LED Cube---------------------->
                 <div class="project">
                     <div class="project-text">
@@ -47,12 +174,8 @@
                         </ul>
                     </div>
                     <div class="project-media">
-                        <video autoplay loop muted playsinline preload="auto" class="project1_img">
+                        <video autoplay loop muted playsinline preload="auto" class="project1_vid large">
                             <source src="project_images/8x8x8-6.mp4" type="video/mp4">
-                            Your browser does not support the video tagged
-                        </video>
-                        <video autoplay loop muted playsinline preload="auto" class="project1_img">
-                            <source src="project_images/8x8x8-5.mp4" type="video/mp4">
                             Your browser does not support the video tagged
                         </video>
                         <img src="project_images/8x8x8-1.JPG" alt="led cube" class="project1_img rotate-90">
@@ -61,6 +184,7 @@
                         <img src="project_images/8x8x8-4.JPG" alt="led cube" class="project1_img">   
                     </div>
                 </div>
+
                 <!-------------------------Robot Arm-------------------------->
                 <div class="project">
                     <div class="project-text">
@@ -77,15 +201,46 @@
                         </ul>
                     </div>
                     <div class="project-media">
-                        <img src="project_images/robot_arm1.JPG" alt="robotic arm" class="project1_img">
-                        <img src="project_images/robot_arm2.JPG" alt="robotic arm" class="project1_img">
-                        <img src="project_images/robot_arm3.JPG" alt="robotic arm" class="project1_img rotate-90">
-                        <video autoplay loop muted playsinline preload="auto" class="robot_arm_vid">
+                        <video autoplay loop muted playsinline preload="auto" class="project1_vid large">
                             <source src="project_images/robot_arm4.mp4" type="video/mp4">
                             Your browser does not support the video tagged
                         </video>
+                        <img src="project_images/robot_arm1.JPG" alt="robotic arm" class="project1_img">
+                        <img src="project_images/robot_arm2.JPG" alt="robotic arm" class="project1_img">
+                        <img src="project_images/robot_arm3.JPG" alt="robotic arm" class="project1_img rotate-90">
                     </div>
                 </div>
+
+                <!---------------------3D Object Scanner---------------------->
+                <div class="project">
+                    <div class="project-text">
+                        <h1>Object 3D Scanner</h1>
+                        <hr>
+                        <ul class="project_text">
+                            <li>Developed dual axis gimbal and camera setup controlled 
+                                by Raspberry Pi to rotate objects on a stage in front 
+                                of camera</li>
+                            <li>Developed python script to automatically connect to AWS S3 
+                                Bucket and upload sequences of photos, which get pulled by 
+                                the front end application and fed to Gemini Veo to generate 
+                                custom professional-quality videos</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <video autoplay loop muted playsinline preload="auto" class="project1_vid large">
+                            <source src="project_images/scanner_1.mp4" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <video autoplay loop muted playsinline preload="auto" class="project1_vid">
+                            <source src="project_images/scanner_2.mp4" type="video/mp4">
+                            Your browser does not support the video tagged
+                        </video>
+                        <img src="project_images/scanner_3.jpg" alt="led cube" class="project1_img wide">   
+                    </div>
+                </div>
+
+
+
                 <!----------------------------Connect 4 Bot------------------------------>
                 <div class="project">
                     <div class="project-text">
@@ -113,6 +268,8 @@
                         <img src="project_images/connect42.jpg" alt="led cube" class="project1_img">
                     </div>
                 </div>
+
+
                 <!---------------------TIM---------------------->
                 <div class="project">
                     <div class="project-text">
@@ -130,15 +287,16 @@
                                 Translate and Text-to-Speech to read it out loud </li>
                         </ul>
                     </div>
-                    <div class="project-media1">
-                        <video id="TIMVideo" autoplay loop muted playsinline class="project1_vid">
+                    <div class="project-media">
+                        <video autoplay loop muted playsinline preload="auto" class="project1_vid large">
                             <source src="project_images/TIM2.mp4" type="video/mp4">
                             Your browser does not support the video tagged
                         </video>
-                        <button id="muteBtn">Unmute</button>
-                        <img src="project_images/TIM1.JPEG" alt="Tourist Information Provider" class="tim_img">
+                        <img src="project_images/TIM1.JPEG" alt="Tourist Information Provider" class="project1_img">
                     </div>
                 </div>
+
+
                 <!--------------------------FPV Drone--------------------------------------->
                 <div class="project">
                     <div class="project-text">
@@ -155,9 +313,11 @@
                         </ul>
                     </div>
                     <div class="project-media">
-                        <img src="project_images/drone.jpg" alt="led cube" class="drone_img"> 
+                        <img src="project_images/drone.jpg" alt="led cube" class="project1_img wide"> 
                     </div>
                 </div>
+
+
                 <!-------------------------Medicarm-------------------------->
                 <div class="project">
                     <div class="project-text">
@@ -176,33 +336,14 @@
                                 mechanical control</li>
                         </ul>
                     </div>
-                    <div class="project-media1">
-                        <video id="medicarm_video" autoplay loop muted playsinline class="project1_vid">
+                    <div class="project-media">
+                        <video id="medicarm_video" autoplay loop muted playsinline class="project1_vid larger">
                             <source src="project_images/medicarm1.mp4" type="video/mp4">
                             Your browser does not support the video tagged
                         </video>
-                        <button id="muteBtn2">Unmute</button>
                     </div>
                 </div>
-                <!--------------------------Robot in 3 Days---------------------------------->
-                <div class="project">
-                    <div class="project-text">
-                        <h1>RI3D (Robot in 3 Days) Chassis</h1>
-                        <hr>
-                        <ul class="project_text">
-                            <li>Aided with assembly of robot made to complete FIRST 
-                                Robotics competition game for 2025</li>
-                            <li>Assembled drive train and arm mechanism for raising 
-                                and dropping game piece </li>
-                            <li>Collaborated with other students and used drill press, 
-                                chain tool, and horizontal band saw, to complete a remote 
-                                controlled prototype</li>
-                        </ul>
-                    </div>
-                    <div class="project-media">
-                        <img src="project_images/ri3d-1.jpg" alt="robotic arm" class="project1_img">
-                    </div>
-                </div>
+
             </div>
         </div>
         <script src="mute_button.js"></script>
